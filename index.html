@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度搜索风云榜</title>
+    <link rel="icon" href="./images/百度.png">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- 中间盒子 -->
+        <div class="container">
+            <!-- 网页头部 -->
+            <div class="header clearfix">
+                <!-- 给网页设置logo下的h1标签,利于seo -->
+                <h1 class="header-h1 left">
+                    <a href="">
+                        <span>百度风云榜</span> 
+                    </a>
+                </h1>
+                <div class="header-center left">
+                    <div class="header-nav">
+                        <ul>
+                            <li><a href="">新闻</a></li>
+                            <li><a href="">网页</a></li>
+                            <li><a href="" class="select">风云榜</a></li>
+                            <li><a href="">贴吧</a></li>
+                            <li><a href="">知道</a></li>
+                            <li><a href="">音乐</a></li>
+                            <li><a href="">图片</a></li>
+                            <li><a href="">视频</a></li>
+                            <li><a href="">地图</a></li>
+                            <li><a href="">指数</a></li>
+                        </ul>
+                    </div>  
+                    <div class="header-search">
+                        <form action="">
+                                <input type="text" placeholder="正在热搜：国务院机构改革">
+                                <button type="submit">百度一下</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="help left">
+                    <span class="help-span"><a href="">帮助</a></span>
+                    <span><a href="">反馈</a></span>
+                </div>
+            </div>
+            <!-- 网页导航栏 -->
+            <div class="nav">
+                <ul class="nav-ul clearfix">
+                    <li  class="nav-select"><a href="">首页</a></li>
+                    <li><a href="">风云时讯</a></li>
+                    <li  class="meau_relative"><a href="">娱乐</a>
+                        <ul class="meau disabled clearfix">
+                            <a href=""><li>电影</li></a>
+                            <a href=""><li>电视剧</li></a>
+                            <a href=""><li>综艺</li></a>
+                            <a href=""><li>动漫</li></a>
+                            <a href=""><li>少儿</li></a>
+                            <a href=""><li>纪录片</li></a>
+                        </ul>
+                    </li>
+                    <li  class="meau_relative"><a href="">小说</a>
+                        <ul class="meau disabled clearfix">
+                            <a href=""><li>全部</li></a>
+                            <a href=""><li>玄幻奇幻</li></a>
+                            <a href=""><li>都市言情</li></a>
+                            <a href=""><li>武侠仙侠</li></a>
+                            <a href=""><li>青春校园</li></a>
+                            <a href=""><li>穿越架空</li></a>
+                            <a href=""><li>惊悚悬疑</li></a>
+                            <a href=""><li>历史军事</li></a>
+                            <a href=""><li>游戏竞技</li></a>
+                            <a href=""><li>耽美同人</li></a>
+                            <a href=""><li>文字经典</li></a>
+                        </ul>
+                    </li>
+                    </li>
+                    <li  class="meau_relative"><a href="">游戏
+                        <ul class="meau disabled clearfix">
+                            <a href=""><li>网页游戏</li></a>
+                            <a href=""><li>网络游戏</li></a>
+                            <a href=""><li>手机游戏</li></a>
+                            <a href=""><li>单机游戏</li></a>
+                        </ul>
+                    </li>
+                    </a></li>
+                    <li  class="meau_relative"><a href="">人物</a>
+                        <ul class="meau disabled clearfix">
+                            <a href=""><li>热点人物</li></a>
+                            <a href=""><li>名家人物</li></a>
+                            <a href=""><li>公益人物</li></a>
+                            <a href=""><li>财经人物</li></a>
+                            <a href=""><li>体坛人物</li></a>
+                            <a href=""><li>主持人</li></a>
+                            <a href=""><li>历史人物</li></a>
+                            <a href=""><li>互联网人</li></a>
+                            <a href=""><li>女明星</li></a>
+                            <a href=""><li>男明星</li></a>
+                            <a href=""><li>欧美明星</li></a>
+                        </ul>
+                    </li>
+                    </li>
+                    <li  class="meau_relative"><a href="">汽车</a>
+                        <ul class="meau disabled clearfix">
+                            <a href=""><li>热搜汽车</li></a>
+                            <a href=""><li>电动汽车</li></a>
+                            <a href=""><li>微型车</li></a>
+                            <a href=""><li>小型车</li></a>
+                            <a href=""><li>紧凑型车</li></a>
+                            <a href=""><li>中级车</li></a>
+                            <a href=""><li>中高级车</li></a>
+                            <a href=""><li>豪华车</li></a>
+                            <a href=""><li>SUV</li></a>
+                            <a href=""><li>MPV</li></a>
+                            <a href=""><li>汽车度月</li></a>
+                        </ul>
+                    </li>
+                    <li  class="meau_relative"><a href="">热点</a>
+                        <ul class="meau disabled clearfix">
+                            <a href=""><li>实时热点</li></a>
+                            <a href=""><li>今日热点</li></a>
+                            <a href=""><li>七日热点</li></a>
+                        </ul>
+                    </li>
+                    <li><a href="">全部榜单</a></li>
+                    <li><a href="">地域风向标</a></li>
+                    <li><a href="">人群风向标</a></li>
+                </ul>
+            </div>
+            <!-- 实时热点 -->
+            <div class="hot">
+                <div class="hot_tab1">
+                    <ul class="hot_click clearfix">
+                        <li class="li1_position current"><span class="time"></span>实时热点</li>
+                        <li class="li2_position checked"><span class="seven"></span>七日关注</li>
+                    </ul>
+                    <div class="click_show">
+                        <div class="hot_main show">
+                            <div class="title">
+                                <span class="title-index left">排名</span>
+                                <span class="title-value left">关键词</span>
+                                <span class="title-number right"> 搜索指数</span>
+                            </div>
+                            <ul class="hot-list">
+                                <li><span class="red">1</span><a href="">台媒:解放军向南海发..</a><span class="number-list">707969</span></li>
+                                <li><span class="red">2</span><a href="">陈阿喜去世</a><span class="number-list">650314</span></li>
+                                <li><span class="red">3</span><a href="">美国威斯康星洲进入紧..</a><span class="number-list">611442</span></li>
+                                <li><span class="gray">4</span><a href="">美国警察对黑人连开7枪..</a><span class="number-list">547942</span></li>
+                                <li><span class="gray">5</span><a href="">薛之谦火锅店餐饮具检..</a><span class="number-list">533451</span></li>
+                                <li><span class="gray">6</span><a href="">广西女租客发现天花板..</a><span class="number-list">4743415</span></li>
+                                <li><span class="gray">7</span><a href="">日本首相安倍晋三正式..</a><span class="number-list">4548615</span></li>
+                                <li><span class="gray">8</span><a href="">花23万买辅导结果物..</a><span class="number-list">4341465</span></li>
+                                <li><span class="gray">9</span><a href="">腾讯回应封号男子坠亡</a><span class="number-list">4243415</span></li>
+                                <li><span class="gray">10</span><a href="">张雨绮发文支持鹿晗公..</a><span class="number-list">4013415</span></li>
+                            </ul>
+                            <p class="right"><a href="" class="asain">完整榜单</a></p>
+                        </div>
+                        <div class="seven_main">
+                            <div class="title">
+                                <span class="title-index left">排名</span>
+                                <span class="title-value left">关键词</span>
+                                <span class="title-number right"> 搜索指数</span>
+                            </div>
+                            <ul class="hot-list">
+                                <li><span class="red">1</span><a href="">抗日战争胜利75周年</a><span class="number-list">933415</span></li>
+                                <li><span class="red">2</span><a href="">印媒：中印两国在边境..</a><span class="number-list">912113</span></li>
+                                <li><span class="red">3</span><a href="">山西襄汾坍塌饭店老板..</a><span class="number-list">873214</span></li>
+                                <li><span class="gray">4</span><a href="">吉林珲春一房屋屋顶被..</a><span class="number-list">812300</span></li>
+                                <li><span class="gray">5</span><a href="">薛之谦火锅店餐饮具检..</a><span class="number-list">712098</span></li>
+                                <li><span class="gray">6</span><a href="">女生军训被马蜂爬嘴一..</a><span class="number-list">668992</span></li>
+                                <li><span class="gray">7</span><a href="">成龙北京超7000万..</a><span class="number-list">605923</span></li>
+                                <li><span class="gray">8</span><a href="">商务部回应印度禁用1..</a><span class="number-list">529941</span></li>
+                                <li><span class="gray">9</span><a href="">黄正音申请离婚</a><span class="number-list">440990</span></li>
+                                <li><span class="gray">10</span><a href="">政府将负责遭性侵女童..</a><span class="number-list">349958</span></li>
+                            </ul>
+                            <p class="right"><a href="" class="asain">完整榜单</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hot_tab2">
+                    <h2>今日上榜</h2>
+                    <div class="grid-item">
+                        <div class="blue_box relative">
+                            <p><a href=""">阿里第一颗芯</a></p>
+                            <span class="grid_hot absolute">实时热点</span>
+                        </div>
+                        <div class="double_blue relative">
+                            <p><a href=""">小米5G新品发布会</a></p>
+                            <span class="grid_hot absolute">实时热点</span>
+                        </div>
+                        <div class="red_box relative">
+                            <p><a href=""">退役军人专属</a></p>
+                            <span class="grid_hot absolute">实时热点</span>
+                        </div>
+                        <div class="blue1_box relative">
+                            <p><a href=""">华为Mate30发布会</a></p>
+                            <span class="grid_hot absolute">实时热点</span>
+                        </div>
+                        <div class="blue2_box relative">
+                            <p><a href=""">阳澄湖大闸蟹</a></p>
+                            <span class="grid_hot absolute">实时热点</span>
+                        </div>
+                        <div class="yellow_box relative">
+                            <p><a href=""">中国世界经济坐标</a></p>
+                            <span class="grid_hot absolute">实时热点</span>
+                        </div>
+                        <div class="double_yellow relative">
+                            <p><a href=""">小米环绕手屏</a></p>
+                            <span class="grid_hot absolute">实时热点</span>
+                        </div>
+                    </div>
+                    <ul class="hot_nb .clearfix">
+                        <li><a href="">3</a></li>
+                        <li><a href="">2</a></li>
+                        <li class="nb_select"><a href="">1</a></li>
+                    </ul>
+                </div>
+                <div class="hot_tab3">
+                    <ul class="selection">
+                        <li class="selection_page">
+                            <ul class="selection_list">
+                                <li><span class="icon"></span><a href=""></a></span><a href="" class="selection_gray">电影</a></li>
+                                <li><a href="">爱情</a></li>
+                                <li><a href="">喜剧</a></li>
+                                <li><a href="">惊悚</a></li>
+                                <li><a href="">科幻</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">电视剧</a></li>
+                                <li><a href="">偶像</a></li>
+                                <li><a href="">言情</a></li>
+                                <li><a href="">古装</a></li>
+                                <li><a href="">家庭</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">综艺</a></li>
+                                <li><a href="">情感</a></li>
+                                <li><a href="">选秀</a></li>
+                                <li><a href="">访谈</a></li>
+                                <li><a href="">内地</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">动漫</a></li>
+                                <li><a href="">搞笑</a></li>
+                                <li><a href="">冒险</a></li>
+                                <li><a href="">情感</a></li>
+                                <li><a href="">国产</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">小说</a></li>
+                                <li><a href="">玄幻</a></li>
+                                <li><a href="">言情</a></li>
+                                <li><a href="">武侠</a></li>
+                                <li><a href="">青春</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">游戏</a></li>
+                                <li><a href="">网页</a></li>
+                                <li><a href="">网络</a></li>
+                                <li><a href="">手游</a></li>
+                                <li><a href="">单机游戏</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">人物</a></li>
+                                <li><a href="">热点</a></li>
+                                <li><a href="">名家</a></li>
+                                <li><a href="">公益</a></li>
+                                <li><a href="">财经</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li><ul class="selection_list">
+                                <li><a href="" class="selection_gray">汽车</a></li>
+                                <li><a href="">微型车</a></li>
+                                <li><a href="">小型车</a></li>
+                                <li><a href="">紧凑型</a></li>
+                                <li><a href="">中级车</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">生活</a></li>
+                                <li><a href="">旅游城市</a></li>
+                                <li><a href="">博物馆</a></li>
+                                <li><a href="">宠物</a></li>
+                                <li><a href="">小吃</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul class="selection_list">
+                                <li><a href="" class="selection_gray">科技</a></li>
+                                <li><a href="">手机</a></li>
+                                <li><a href="">软件</a></li>
+                                <span class="more"><a href="">更多</a></span>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3 class="all_list right"><a href="">全部榜单</a></h3>
+                </div>
+            </div>
+            <!-- 百度指数 -->
+            <div class="img clearfix">
+                <div class="img_left left"><img src="./images/index.jpg" alt="百度指数"></div>
+                <div class="img_right right"><img src="./images/pic.png" alt="地域风向标"></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+            <div class="main_list">
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info show">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/motian.jpeg" alt="">
+                            <a href="">《摩天大楼》是由陈正道、许肇任、吴中天执导，郭涛、杨子姗领衔主演，杨颖特别主演，焦刚、刘丹、倪虹洁、吕聿来、郑人硕等主演的都市情感悬疑网剧。该剧改编自陈雪的同名小说，讲述了在一幢摩天大…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/tegong.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/heibao.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/ezhihua.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">七月十四</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyue.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">白鹭</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/bailu.jpeg" alt="">
+                            <a href="">白鹭（英文名称：Little Egret）：白鹭属共有13种鸟类，其中有大白鹭、中白鹭、小白鹭和黄嘴白鹭四种体羽皆是全白，均习称为“白鹭”。这4种白鹭均是中等体型（45-90厘米）的白…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">七月半</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/qiyueban.jpeg" alt="">
+                            <a href="">中元节，是道教名称，民间世俗称为七月半、七月十四、祭祖节，佛教称为盂兰盆节。节日习俗主要有祭祖、放河灯、祀亡魂、焚纸锭、祭祀土地等。它的产生可追溯到上古时代的祖灵崇拜以及相关时祭…
+                            </a>
+                        </div>
+                    </li>
+                    <li class="clearfix onmouse_list">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">10</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2378</span>
+                        </div>  
+                        <div class="item_info">
+                            <img src="./images/wozai.jpeg" alt="">
+                            <a href="">《我在时间尽头等你》是由姚婷婷执导，刘迟、郑执、浦贤、杨同坤、姚婷婷担任编剧，江志强监制，李鸿其、李一桐主演的奇幻爱情片。讲述的是原本是青梅竹马一起长大的林格和邱倩在高中校园…</a>
+                        </div>
+                    </li>
+                </ul>    
+                <span class="intact right">完整榜单</span>
+            </div>
+                <div class="main_top clearfix">
+                    <span class="color_red left"><a href="">娱乐</a></span>
+                    <span class="right"><a href="">更多 ></a></span>
+                </div>
+                <ul class="main_title clearfix">
+                    <li><a href=""><</a></li>
+                    <li><a href="">电影</a></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">综艺</a></li>
+                    <li><a href="">动漫</a></li>
+                    <li><a href="">></a></li>
+                </ul>
+                <div class="list_tt">
+                    <span class="tt_index left">排名</span>
+                    <span class="tt_key left">关键字</span>
+                    <span class="tt_value right">搜索指数</span>
+                </div>
+                <ul class="list_bd">
+                    <li class="clearfix">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">1</span><a href="">八佰</a><span class="bd_icon right">37382</span>
+                        </div>
+                        <div class="item_info">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《八佰》是由华谊兄弟电影有限公司和北京七印象文化传媒有限公司出品，腾讯影业文化传播有限公司、北京光线影业有限公司和阿里巴巴影业（北京）有限公司联合出品，导演管虎执导，黄志忠…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">2</span><a href="">摩天大楼</a><span class="bd_icon right">20314</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">一般指非常高的高楼大厦，比喻大楼似乎有摩天轮那么高。例如：台湾101大楼、迪拜哈利法塔、广州广州塔等超高层建筑。在中国大陆，《民用建筑设计通则》GB50352—2005规定：建筑高度…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="list_first">
+                            <span class="bd_nb color_red">3</span><a href="">特工狂花</a><span class="bd_icon right">12860</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《特工狂花》是雷尼·哈林执导的美国动作电影，由吉娜·戴维斯、塞缪尔·杰克逊等出演，于1996年上映。该片讲述平凡的女教师因车祸恢复记忆，发现自己的真实身份是职业特工后，开始寻找出卖她的…</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">4</span><a href="">黑豹</a><span class="bd_icon right">8212</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《黑豹》是由美国漫威影业公司出品的科幻动作电影，由瑞恩·库格勒执导，查德维克·博斯曼、迈克尔·B·乔丹、露皮塔·尼永奥、达娜·古瑞拉、马丁·弗瑞曼联合主演。影片根据漫威漫画改编，故…</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">5</span><a href="">恶之花</a><span class="bd_icon right">3967</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《恶之花》是由米歇尔·普拉西多执导的惊悚片，吉姆·罗斯·斯图尔特、帕兹·维嘉参加演出。该片讲述了雷纳托·瓦伦卡斯扎干下了一连串震惊全国的抢劫犯罪事件。该片于2010年9月6日在意大利上…</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">6</span><a href="">小妇人</a><span class="bd_icon right">3165</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《小妇人》是由格蕾塔·葛韦格执导，西尔莎·罗南、艾玛·沃特森、佛罗伦斯·珀、伊莱扎·斯坎伦、劳拉·邓恩、提莫西·查拉梅联袂主演的剧情片，于2019年12月25日在美国上映，2020年8月25日（…</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">7</span><a href="">我在时间尽头等你</a><span class="bd_icon right">2861</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《小妇人》是由格蕾塔·葛韦格执导，西尔莎·罗南、艾玛·沃特森、佛罗伦斯·珀、伊莱扎·斯坎伦、劳拉·邓恩、提莫西·查拉梅联袂主演的剧情片，于2019年12月25日在美国上映，2020年8月25日（…</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">釜山行</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《小妇人》是由格蕾塔·葛韦格执导，西尔莎·罗南、艾玛·沃特森、佛罗伦斯·珀、伊莱扎·斯坎伦、劳拉·邓恩、提莫西·查拉梅联袂主演的剧情片，于2019年12月25日在美国上映，2020年8月25日（…</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list_first">
+                            <span class="bd_nb color_gray">8</span><a href="">釜山行</a><span class="bd_icon right">2687</span>
+                        </div>
+                        <div class="item_info disabled">
+                            <img src="./images/babai.jpeg" alt="">
+                            <a href="">《小妇人》是由格蕾塔·葛韦格执导，西尔莎·罗南、艾玛·沃特森、佛罗伦斯·珀、伊莱扎·斯坎伦、劳拉·邓恩、提莫西·查拉梅联袂主演的剧情片，于2019年12月25日在美国上映，2020年8月25日（…</a>
+                        </div>
+                    </li>
+        </div>
+    </div>
+            <!-- 网页底部版权声明 -->
+            <div class="footer">
+                <div class="footer_container">
+                    <div class="footer_left left">
+                        <div>©2020 Baidu</div>
+                        <div>使用百度前必读</div>
+                        <div>关于百度风云榜</div>
+                    </div>
+                    <div class="footer_right right">
+                        搜索指数数据来源：<span></span>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
